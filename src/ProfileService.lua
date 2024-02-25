@@ -25,7 +25,7 @@ type GlobalUpdates = {
 	ClearActiveUpdate: (self: GlobalUpdates, update_id: number) -> (),
 }
 
-type ProfileStore<T> = {
+export type ProfileStore<T> = {
 	Mock: ProfileStore<T>,
 
 	LoadProfileAsync: (
@@ -52,7 +52,7 @@ type ProfileStore<T> = {
 	WipeProfileAsync: (self: ProfileStore<T>, profile_key: string) -> boolean,
 }
 
-type Profile<T> = {
+export type Profile<T> = {
 	Data: T,
 	MetaData: {
 		ProfileCreateTime: number,
@@ -82,7 +82,7 @@ type Profile<T> = {
 	Save: (self: Profile<T>) -> (),
 }
 
-type UnsafeProfile<T> = Profile<T> & {
+export type UnsafeProfile<T> = Profile<T> & {
 	ClearGlobalUpdates: (self: UnsafeProfile<T>) -> (),
 	OverwriteAsync: (self: UnsafeProfile<T>) -> (),
 }
