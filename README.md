@@ -2,6 +2,7 @@
 
 To install using wally:
 ```
+[server-dependencies]
 ProfileService = "aspecky/profileservice@^1.0.0"
 ```
 If you dont use rojo but would still like to use wally packages you can use [studio-wally](https://github.com/fewkz/studio-wally?tab=readme-ov-file)
